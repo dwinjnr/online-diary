@@ -6,6 +6,7 @@ body{
   font-family:sans-serif;
   font-weight: 400;
   background-color: transparent;
+  color: white;
 }
 .mycontainer{
   margin-top:80px;
@@ -20,6 +21,7 @@ p{
   color: white;
   line-height: 26px;
   font-size: 16px;
+  text-align: center;
 }
 .my-link{
   width: 48%;
@@ -27,4 +29,19 @@ p{
 }
 #signup{
   float: right;
+}
+.info{
+  text-align: center;
+  color: #28a745; 
+  line-height: 26px;
+  font-size: 13px;
+}
+.other{
+  cursor: pointer;
+  text-decoration: none;
+  color: #28a745;
+}
+.other:hover{
+  text-decoration: none;
+  color: #17a2b8;  
 }
