@@ -1,7 +1,7 @@
 @extends('app')
 
 @section('content')
-  <div class="container">
+  <div class="container" style="margin-top: 40px;">
     <div class="row">
       <div class="col-sm-4 offset-sm-4">
         <a href="/signup" class="btn btn-outline-info my-link" id="signup">Sign Up</a>
