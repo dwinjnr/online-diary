@@ -14,3 +14,5 @@
 Route::get('/', 'PagesController@index');
 
 Route::get('/login', 'PagesController@login');
+
+Route::get('/signup', 'PagesController@signup');
