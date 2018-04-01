@@ -18,4 +18,12 @@
         </div>
         @yield('content')
     </body>
+    <footer>
+    <span>
+        My Diary &copy; 2018 designed by 
+        <a href="https://github.com/dwinjnr">
+        Godwin Ogbonnaya Jnr
+        </a>
+    </span>
+    </footer>
 </html>

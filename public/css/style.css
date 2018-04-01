@@ -72,3 +72,20 @@ input{
 #loginForm input{
   border: 1px solid #28a745 !important;
 }
+footer{
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 10px;
+}
+footer span{
+  font-size: 14px;
+  color: #28a745; 
+}
+footer a{
+  text-decoration: none; 
+  color: #17a2b8;
+}
+footer a:hover{
+  text-decoration: none;
+}
