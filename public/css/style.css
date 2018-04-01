@@ -32,19 +32,43 @@ p{
 }
 .info{
   text-align: center;
-  color: #28a745; 
   line-height: 26px;
   font-size: 13px;
+}
+#loginForm .info{
+  color: #28a745;   
+}
+#signupForm .info{
+  color: #17a2b8;  
 }
 .other{
   cursor: pointer;
   text-decoration: none;
+}
+#loginForm .other{
   color: #28a745;
 }
-.other:hover{
+#loginForm .other:hover{
   text-decoration: none;
   color: #17a2b8;  
 }
+#signupForm .other{
+  color: #17a2b8;
+}
+#signupForm .other:hover{
+  text-decoration: none;
+  color: #28a745; 
+}
 .link-btn{
   float: right;
+}
+input{
+  background-color: transparent !important;
+  color: white !important;
+}
+#signupForm input{
+  border: 1px solid #17a2b8 !important;
+}
+#loginForm input{
+  border: 1px solid #28a745 !important;
 }

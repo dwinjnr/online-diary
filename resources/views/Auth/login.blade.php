@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-6 offset-sm-3">
-      <form method="post" role="form">
+      <form id="loginForm" method="post" role="form">
         <p class="info"> Log in with your email and password </p>
         <div class="form-group row">
           <label class="col-3 control-form-label col-form-label-sm">Email</label>
