@@ -27,7 +27,7 @@ p{
   width: 48%;
   height: 40px;
 }
-#signup{
+#register{
   float: right;
 }
 .info{
@@ -38,7 +38,11 @@ p{
 #loginForm .info{
   color: #28a745;   
 }
-#signupForm .info{
+#registerForm .info{
+  color: #17a2b8;  
+}
+#resetForm .info{
+  font-size: 17px;
   color: #17a2b8;  
 }
 .other{
@@ -52,10 +56,10 @@ p{
   text-decoration: none;
   color: #17a2b8;  
 }
-#signupForm .other{
+#registerForm .other{
   color: #17a2b8;
 }
-#signupForm .other:hover{
+#registerForm .other:hover{
   text-decoration: none;
   color: #28a745; 
 }
@@ -66,7 +70,7 @@ input{
   background-color: transparent !important;
   color: white !important;
 }
-#signupForm input{
+#registerForm input, #resetForm input{
   border: 1px solid #17a2b8 !important;
 }
 #loginForm input{

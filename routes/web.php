@@ -13,6 +13,6 @@
 
 Route::get('/', 'PagesController@index');
 
-Route::get('/login', 'PagesController@login');
+Auth::routes();
 
-Route::get('/signup', 'PagesController@signup');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
