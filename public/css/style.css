@@ -9,7 +9,7 @@ body{
   color: white;
 }
 .mycontainer{
-  margin-top:80px;
+  margin-top:30px;
   text-align: center;
 }
 h2{
@@ -78,9 +78,9 @@ input{
 }
 footer{
   width: 100%;
+  position: absolute;
   text-align: center;
-  position: fixed;
-  bottom: 10px;
+  bottom: 4px;
 }
 footer span{
   font-size: 14px;
