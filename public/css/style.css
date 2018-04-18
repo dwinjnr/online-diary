@@ -12,6 +12,23 @@ body{
   margin-top:30px;
   text-align: center;
 }
+#navbar, #dropdown{
+  background-color: #8bc34a9e;
+}
+#navbar a, #dropdown a{
+  color: white;
+}
+#navbar button{
+  background-color: transparent;
+  border: none !important ;
+}
+#dropdown {
+  margin-top: 8px;
+}
+#dropdown a:hover{
+  background-color: transparent;
+  color: #17a2b8;
+}
 h2{
   font-weight: bold;
   text-align: center;
