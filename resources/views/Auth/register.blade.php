@@ -8,20 +8,20 @@
                 @csrf
                 <p class="info"> Interested? Sign up!  </p>
                 <div class="form-group row">
-                    <label for="fname" class="col-3 control-form-label col-form-label-sm">{{ __('Firstname') }}</label>
+                    <label for="name" class="col-3 control-form-label col-form-label-sm">{{ __('Name') }}</label>
 
                     <div class="col-9">
-                        <input id="fname" type="text" class="form-control{{ $errors->has('fname') ? ' is-invalid' : '' }}" name="fname" value="{{ old('fname') }}" required autofocus>
+                        <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
 
-                        @if ($errors->has('fname'))
+                        @if ($errors->has('name'))
                             <span class="invalid-feedback">
-                                <strong>{{ $errors->first('fname') }}</strong>
+                                <strong>{{ $errors->first('name') }}</strong>
                             </span>
                         @endif
                     </div>
                 </div>
 
-                <div class="form-group row">
+                {{-- <div class="form-group row">
                     <label for="lname" class="col-3 control-form-label col-form-label-sm">{{ __('Lastname') }}</label>
 
                     <div class="col-9">
@@ -33,7 +33,7 @@
                             </span>
                         @endif
                     </div>
-                </div>
+                </div> --}}
 
                 <div class="form-group row">
                     <label for="email" class="col-3 control-form-label col-form-label-sm">{{ __('Email') }}</label>
