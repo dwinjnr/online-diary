@@ -21,20 +21,6 @@
                     </div>
                 </div>
 
-                {{-- <div class="form-group row">
-                    <label for="lname" class="col-3 control-form-label col-form-label-sm">{{ __('Lastname') }}</label>
-
-                    <div class="col-9">
-                        <input id="lname" type="text" class="form-control{{ $errors->has('lname') ? ' is-invalid' : '' }}" name="lname" value="{{ old('lname') }}" required autofocus>
-
-                        @if ($errors->has('lname'))
-                            <span class="invalid-feedback">
-                                <strong>{{ $errors->first('lname') }}</strong>
-                            </span>
-                        @endif
-                    </div>
-                </div> --}}
-
                 <div class="form-group row">
                     <label for="email" class="col-3 control-form-label col-form-label-sm">{{ __('Email') }}</label>
 
@@ -78,7 +64,7 @@
                         </button>
                     </div>
                 </div>
-                <p> If you have signed up already, please <a href="/login" class="other">Login</a></p>                         
+                <p> If you have registered already, please <a href="/login" class="other">Login</a></p>                         
             </form>
         </div>
     </div>

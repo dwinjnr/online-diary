@@ -57,7 +57,7 @@
                         {{ __('Forgot Your Password?') }}
                     </a>
                 </p>
-                <p> If you haven't signed up yet, please <a href="/register" class="other">Register</a></p> 
+                <p> If you haven't registered yet, please <a href="/register" class="other">Register</a></p> 
             </form>
         </div>
     </div>

@@ -16,3 +16,5 @@ Route::get('/', 'PagesController@index');
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+Route::resource('notes', 'NoteController');
