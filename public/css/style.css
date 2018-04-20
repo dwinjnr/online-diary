@@ -6,7 +6,6 @@ body{
   font-family:sans-serif;
   font-weight: 400;
   background-color: transparent;
-  color: white;
 }
 .mycontainer{
   margin-top:30px;
@@ -108,5 +107,31 @@ footer a{
   color: #17a2b8;
 }
 footer a:hover{
+  text-decoration: none;
+}
+label{
+  color: white;
+}
+.card{
+  margin: auto;
+  text-align: center;
+  color: #28a745;
+}
+.card p{
+  color: #28a745;
+  font-size: 50px;
+  margin: 20px auto !important;
+}
+.create{
+  float: left;
+}
+.view{
+  float: right;
+}
+.create, .view{
+  color: #17a2b8;
+}
+.create:hover, .view:hover{
+  color: #28a745;
   text-decoration: none;
 }
