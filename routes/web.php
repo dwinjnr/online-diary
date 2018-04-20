@@ -13,8 +13,8 @@
 
 Route::get('/', 'PagesController@index');
 
+Route::resource('notes', 'NoteController');
+
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
-
-Route::resource('notes', 'NoteController');
