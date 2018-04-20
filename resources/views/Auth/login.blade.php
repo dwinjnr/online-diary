@@ -8,7 +8,7 @@
                 @csrf
                 <p class="info"> Log in with your email and password </p>
                 <div class="form-group row">
-                    <label for="email" class="col-3 control-form-label col-form-label-sm">{{ __('Email') }}</label>
+                    <label for="email" class="col-3 control-form-label col-form-label-md">{{ __('Email') }}</label>
 
                     <div class="col-9">
                         <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
@@ -22,7 +22,7 @@
                 </div>
 
                 <div class="form-group row">
-                    <label for="password" class="col-3 control-form-label col-form-label-sm">{{ __('Password') }}</label>
+                    <label for="password" class="col-3 control-form-label col-form-label-md">{{ __('Password') }}</label>
 
                     <div class="col-9">
                         <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
@@ -36,7 +36,7 @@
                 </div>
 
                 <div class="form-group row">
-                    <div class="col-9 offset-sm-3">
+                    <div class="col-9 offset-md-3">
                         <div class="checkbox">
                             <label>
                                 <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> {{ __('Remember Me') }}
@@ -46,7 +46,7 @@
                 </div>
 
                 <div class="form-group row mb-0">
-                    <div class="offset-sm-2 col-sm-10">
+                    <div class="offset-md-2 col-md-10">
                         <button type="submit" class="btn btn-outline-success link-btn">
                             {{ __('Login') }}
                         </button>
