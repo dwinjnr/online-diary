@@ -151,12 +151,13 @@ label{
   margin: 0 !important;
 }
 .card-footer input{
-  background-color: #28a745 !important;
+  background-color: #ffc107 !important;
+  border-color: #ffc107 !important;
   color: white;
 }
 .card-footer input:hover{
-  background-color: red !important;
-  border: 1px solid red;
+  background-color: #e4ae0f !important;
+  border: 1px solid #e4ae0f;
 }
 .pagination{
   padding-right: 15px !important;

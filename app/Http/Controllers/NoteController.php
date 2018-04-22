@@ -17,7 +17,7 @@ class NoteController extends Controller
     public function index()
     {
         $user_id = auth()->user()->id;
-        $notes = DB::table('notes')->where('user_id', $user_id)->orderBy('created_at', 'desc')->paginate(1);
+        $notes = DB::table('notes')->where('user_id', $user_id)->orderBy('created_at', 'desc')->paginate(4);
         return view('notes.index')->with('notes', $notes);
     }
 
