@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 use App\User;
 use App\Note;
 
@@ -16,8 +17,8 @@ class NoteController extends Controller
     public function index()
     {
         $user_id = auth()->user()->id;
-        $user = User::find($user_id);
-        return view('notes.index')->with('notes', $user->notes);
+        $notes = DB::select('SELECT * FROM notes WHERE user_id = '.$user_id.' ORDER BY created_at DESC');
+        return view('notes.index')->with('notes', $notes);
     }
 
     /**
@@ -94,6 +95,8 @@ class NoteController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $note = Note::find($id);
+        $note->delete();
+        return redirect('/notes')->with('success', 'Note Deleted');
     }
 }

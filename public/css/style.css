@@ -132,10 +132,10 @@ label{
 .view{
   float: right;
 }
-.create, .view, .note .card-footer p a{
+.create, .view{
   color: #17a2b8;
 }
-.create:hover, .view:hover, .note .card-footer p a:hover{
+.create:hover, .view:hover{
   color: #28a745;
   text-decoration: none;
 }
@@ -150,10 +150,11 @@ label{
   text-align: left;
   margin: 0 !important;
 }
-.note .card-footer p{
-  float: right;
+.card-footer input{
+  background-color: #28a745 !important;
+  color: white;
 }
-.note .card-footer p a{
-  text-decoration: none;
-  margin-right: 15px;
+.card-footer input:hover{
+  background-color: red !important;
+  border: 1px solid red;
 }
