@@ -28,6 +28,7 @@
             </div>
         </div>        
         @endforeach
+        {{$notes->links()}}
         </div>
     </div>
 </div>
