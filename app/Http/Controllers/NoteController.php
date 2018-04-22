@@ -17,7 +17,6 @@ class NoteController extends Controller
     public function index()
     {
         $user_id = auth()->user()->id;
-        // $notes = DB::select('SELECT * FROM notes WHERE user_id = '.$user_id.' ORDER BY created_at DESC');
         $notes = DB::table('notes')->where('user_id', $user_id)->orderBy('created_at', 'desc')->paginate(1);
         return view('notes.index')->with('notes', $notes);
     }
@@ -72,8 +71,9 @@ class NoteController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        //
+    {   
+        $note = Note::find($id);
+        return view('notes.edit')->with('note', $note);
     }
 
     /**
@@ -85,7 +85,16 @@ class NoteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'title' => 'required',
+            'body' => 'required'
+        ]);
+        $note = Note::find($id);
+        $note->title = $request->input('title');
+        $note->body = $request->input('body');      
+        $note->save();
+
+        return redirect('/notes')->with('success', 'Note Updated');
     }
 
     /**

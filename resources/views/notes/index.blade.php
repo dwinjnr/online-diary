@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container" style="margin-top: 60px;">
+<div class="container" style="margin-top: 20px;">
     <div class="row justify-content-center">
         <div class="col-md-8">
         @foreach($notes as $note)
