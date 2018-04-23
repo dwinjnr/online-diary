@@ -26,6 +26,10 @@ class DashboardController extends Controller
     {   
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
-        return view('dashboard')->with('notes', $user->notes);
+        $record = [
+            'notes' => count($user->notes),
+            'appointments' => count($user->appointments)
+        ];
+        return view('dashboard')->with('record', $record);
     }
 }

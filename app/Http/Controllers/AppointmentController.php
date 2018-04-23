@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use App\Appointment;
+use DB;
 
 class AppointmentController extends Controller
 {
@@ -15,7 +16,9 @@ class AppointmentController extends Controller
      */
     public function index()
     {
-        //
+        $user_id = Auth()->User()->id;
+        $appointments = DB::table('appointments')->where('user_id', $user_id)->orderBy('created_at', 'desc')->paginate(4);
+        return view('appointments.index')->with('appointments', $appointments);
     }
 
     /**
@@ -99,6 +102,8 @@ class AppointmentController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $appointment = Appoinment::find($id);
+        $appointment->delete();
+        return redirect('/appointments')->with('success', 'Appointment Deleted');
     }
 }

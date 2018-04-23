@@ -139,13 +139,13 @@ label{
   color: #28a745;
   text-decoration: none;
 }
-.note{
+.note, .appointment{
   text-align: left !important;
 }
-.note h5{
+.note h5, .appointment h5{
   margin-bottom: 0;
 }
-.note p{
+.note p, .appointment p{
   font-size: 15px !important;
   text-align: left;
   margin: 0 !important;
@@ -169,4 +169,9 @@ label{
 }
 .pagination a{
   color: #17a2b8 !important;
+}
+.appointment p span{
+  background-color: #28a745;
+  margin: 5px;
+  font-size: 14px !important;
 }
