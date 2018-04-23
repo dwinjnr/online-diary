@@ -15,6 +15,8 @@ Route::get('/', 'PagesController@index');
 
 Route::resource('notes', 'NoteController');
 
+Route::resource('appointments', 'AppointmentController');
+
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
