@@ -98,17 +98,19 @@ input{
 }
 footer{
   width: 100%;
-  position: absolute;
+  position: fixed;
   text-align: center;
-  bottom: 4px;
+  bottom: 0;
+  background-color: #73a53a;
+  z-index: 100;
 }
 footer span{
   font-size: 14px;
-  color: #28a745; 
+  color: white; 
 }
 footer a{
   text-decoration: none; 
-  color: #17a2b8;
+  color: black;
 }
 footer a:hover{
   text-decoration: none;

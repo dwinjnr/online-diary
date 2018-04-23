@@ -26,12 +26,12 @@
         @include('inc.navbar')
 
         <div class="container mycontainer">
-            <h2>My Diary</h2>
-            <p> Store your thoughts permanently and secure </p>
+            <h2>Diary</h2>
+            <p> Store it permanently and secure </p>
             @include('inc.messages')
         </div>
             @yield('content')
     </div>
 </body>
-    {{-- @include('inc/footer') --}}
+    @include('inc/footer')
 </html>
