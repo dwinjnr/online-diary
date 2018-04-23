@@ -9,6 +9,16 @@ use DB;
 
 class AppointmentController extends Controller
 {
+     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -80,7 +90,10 @@ class AppointmentController extends Controller
     public function edit($id)
     {
         $appointment = Appointment::find($id);
-        return view('appointments.edit')->with('appointment', $appointment);
+        if(auth()->user()->id !== $appointment->user_id){
+            return redirect('dashboard')->with('error', 'Unauthorized Access');
+        }
+        return view('appointments.edit')->with('appointment', $appointment);        
     }
 
     /**
@@ -121,6 +134,9 @@ class AppointmentController extends Controller
     public function destroy($id)
     {
         $appointment = Appointment::find($id);
+        if(auth()->user()->id !== $appointment->user_id){
+            return redirect('dashboard')->with('error', 'Unauthorized Access');
+        }
         $appointment->delete();
         return redirect('/appointments')->with('success', 'Appointment Deleted');
     }

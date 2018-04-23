@@ -9,6 +9,16 @@ use App\Note;
 
 class NoteController extends Controller
 {
+     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -73,6 +83,9 @@ class NoteController extends Controller
     public function edit($id)
     {   
         $note = Note::find($id);
+        if(auth()->user()->id !== $note->user_id){
+            return redirect('dashboard')->with('error', 'Unauthorized Access');
+        }
         return view('notes.edit')->with('note', $note);
     }
 
@@ -106,6 +119,9 @@ class NoteController extends Controller
     public function destroy($id)
     {
         $note = Note::find($id);
+        if(auth()->user()->id !== $note->user_id){
+            return redirect('dashboard')->with('error', 'Unauthorized Access');
+        }
         $note->delete();
         return redirect('/notes')->with('success', 'Note Deleted');
     }
