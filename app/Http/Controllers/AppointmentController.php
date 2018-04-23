@@ -57,7 +57,7 @@ class AppointmentController extends Controller
         $appointment->user_id = auth()->user()->id;       
         $appointment->save();
 
-        return redirect('/dashboard')->with('success', 'Appointment Created');
+        return redirect('/appointments')->with('success', 'Appointment Created');
     }
 
     /**
@@ -79,7 +79,8 @@ class AppointmentController extends Controller
      */
     public function edit($id)
     {
-        //
+        $appointment = Appointment::find($id);
+        return view('appointments.edit')->with('appointment', $appointment);
     }
 
     /**
@@ -91,7 +92,24 @@ class AppointmentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required',
+            'with' => 'required',
+            'date' => 'required',
+            'time' => 'required'
+        ]);
+
+        $appointment = Appointment::find($id);
+        $appointment->title = $request->input('title');
+        $appointment->description = $request->input('description');
+        $appointment->with = $request->input('with');
+        $appointment->date = $request->input('date');
+        $appointment->time = $request->input('time');      
+        $appointment->save();
+
+        return redirect('/appointments')->with('success', 'Appointment Updated');
     }
 
     /**
@@ -102,7 +120,7 @@ class AppointmentController extends Controller
      */
     public function destroy($id)
     {
-        $appointment = Appoinment::find($id);
+        $appointment = Appointment::find($id);
         $appointment->delete();
         return redirect('/appointments')->with('success', 'Appointment Deleted');
     }
