@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
+use App\Appointment;
 
 class AppointmentController extends Controller
 {
@@ -23,7 +25,7 @@ class AppointmentController extends Controller
      */
     public function create()
     {
-        //
+        return view('appointments.create');
     }
 
     /**
@@ -34,7 +36,25 @@ class AppointmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $this->validate($request, [
+            'title' => 'required',
+            'description' => 'required',
+            'with' => 'required',
+            'date' => 'required',
+            'time' => 'required'
+        ]);
+
+        $appointment = new Appointment;
+        $appointment->title = $request->input('title');
+        $appointment->description = $request->input('description');
+        $appointment->with = $request->input('with');
+        $appointment->date = $request->input('date');
+        $appointment->time = $request->input('time');
+        $appointment->user_id = auth()->user()->id;       
+        $appointment->save();
+
+        return redirect('/dashboard')->with('success', 'Appointment Created');
     }
 
     /**
