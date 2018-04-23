@@ -3,7 +3,7 @@
 @section('content')
 <div class="container" style="margin-top: 20px;">
     <div class="row justify-content-center">
-      <div class="col-md-6">
+      <div class="col-md-6 createForm">
         <h3>Create Note</h3>
         {!! Form::open(['action' => 'NoteController@store', 'method' => 'POST']) !!}
             <div class="form-group row">

@@ -30,7 +30,7 @@
             <p> Store it permanently and secure </p>
             @include('inc.messages')
         </div>
-            @yield('content')
+           <div style="margin-bottom:20px;"> @yield('content') </div>
     </div>
 </body>
     @include('inc/footer')

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container" style="margin-top: 20px;">
     <div class="row justify-content-center">
-      <div class="col-md-6">
+      <div class="col-md-6 editForm">
         <h3>Edit Note</h3>
         {!! Form::open(['action' => ['NoteController@update', $note->id], 'method' => 'POST']) !!}
             <div class="form-group row">

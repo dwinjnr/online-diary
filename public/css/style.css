@@ -3,7 +3,7 @@ html{
   background-size: cover;
 }
 body{
-  font-family:sans-serif;
+  font-family: sans-serif;
   font-weight: 400;
   background-color: transparent;
 }
@@ -50,6 +50,18 @@ p{
 #register{
   float: right;
 }
+#dashboard{
+  margin: auto;
+  display: inherit;
+}
+.blockquote p{
+  font-size: 19px;
+  color: #fff;
+}
+.blockquote-footer {
+  text-align: right;
+  color: #17a2b8;
+}
 .info{
   text-align: center;
   line-height: 26px;
@@ -90,10 +102,10 @@ input{
   background-color: transparent !important;
   color: white !important;
 }
-#registerForm input, #resetForm input{
+#registerForm input, #resetForm input, .createForm input{
   border: 1px solid #17a2b8 !important;
 }
-#loginForm input{
+#loginForm input, .editForm input{
   border: 1px solid #28a745 !important;
 }
 footer{
@@ -101,7 +113,7 @@ footer{
   position: fixed;
   text-align: center;
   bottom: 0;
-  background-color: #73a53a;
+  background-color: #608634;
   z-index: 100;
 }
 footer span{
