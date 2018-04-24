@@ -2,6 +2,7 @@
 ## About 
 
 This app is built with laravel php web application framework, it stores user notes and appointment
+> [Live Preview](https://onlinediary.herokuapp.com/)
 
 - User Authentication
 - C.R.U.D Functionalities
